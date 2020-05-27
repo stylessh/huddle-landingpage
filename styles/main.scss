@@ -1,0 +1,92 @@
+// variables
+@import "./components/variables";
+
+// general styles
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  background: url("../images/bg-desktop.svg");
+  background-color: $violet;
+  background-size: cover;
+
+  font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $heading;
+  font-weight: 700;
+}
+
+p,
+a {
+  font-family: $parragraph;
+  font-weight: 400;
+}
+
+.social {
+  position: absolute;
+  right: 5%;
+  bottom: 5%;
+
+  a {
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 1.1em;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    padding: 12px 15px;
+    text-align: center;
+  }
+}
+
+footer {
+  position: absolute;
+  left: 5%;
+  bottom: 5%;
+
+  .attribution {
+    color: #fff;
+
+    a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  body {
+    background: url("../images/bg-mobile.svg") no-repeat;
+    background-color: $violet;
+
+    font-size: 12px;
+  }
+
+  .social {
+    position: static;
+    text-align: center;
+  }
+
+  footer {
+    display: none;
+  }
+}
+
+// components
+@import "./components/header";
+@import "./components/hero";
